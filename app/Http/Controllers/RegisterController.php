@@ -26,15 +26,15 @@ class RegisterController extends Controller
             'skill' => 'required',
         ]);
 
-        // Code untuk mengirim notifikasi berisi QR/ID ke email
+        // // Code untuk mengirim notifikasi berisi QR/ID ke email
         // $qrCode = QrCode::format ('png')->size(500)->generate($req->input()['nrp']);
         // $qrCode = QrCode::size(300)->generate($userDataJson);
 
-        // Ambil nama dari input
+        // // Ambil nama dari input
         // $nama = $req->input()['nama'];
-        // Ambil tiga karakter pertama dari nama depan
+        // // Ambil tiga karakter pertama dari nama depan
         // $namaPertama = substr($nama, 0, 3);
-        // Ambil tiga karakter pertama dari nama belakang
+        // // Ambil tiga karakter pertama dari nama belakang
         // $namaTerakhir = substr(strrchr($nama, ' '), 1, 3);
         
         // Gabungkan tiga karakter pertama dari nama depan dan nama belakang
@@ -85,36 +85,5 @@ class RegisterController extends Controller
         $userStiki->notify(new RegistrationNotification($qrCode, $userId));
 
         return redirect('/register')->with('success', 'Registrasi berhasil! Silakan login.');
-        
-        // $data = [
-        //     'nama'     => $req->input()['nama'],
-        //     'nrp'      => $req->input()['nrp'],
-        //     'email'    => $req->input()['email'],
-        //     'skill'    => $req->input()['skill'],
-        //     'qr_code'  => $qrCode,
-        //     'user_id'  => $userId
-        // ];
-
-        // Membuat instance validator
-        // $validator = Validator::make($data, [
-        //     'nama' => 'required',
-        //     'nrp' => 'required',
-        //     'email' => 'required|email',
-        //     'skill' => 'required',
-        // ]);
-
-        // // Jika validasi gagal, kembali dengan pesan error
-        // if ($validator->fails()) {
-        //     return redirect('/register')->withErrors($validator)->withInput();
-        // }
-        
-        // $userStiki = UserStiki::create($data);
-
-        // // Send email notification with QR Code and ID
-        // $userStiki->notify(new RegistrationNotification($qrCode, $userId));
-
-        // return redirect('/register')->with('success', 'Registrasi berhasil! Silakan login.');
-    }
-
-    
+    }    
 }
