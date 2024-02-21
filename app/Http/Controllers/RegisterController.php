@@ -81,9 +81,12 @@ class RegisterController extends Controller
         
         $userStiki = UserStiki::create($data);
 
+        // Set variabel $email
+        $email = $userData['email'];
+
         // Send email notification with QR Code and ID
         $userStiki->notify(new RegistrationNotification($qrCode, $userId));
 
-        return redirect('/register')->with('success', 'Registrasi berhasil! Silakan login.');
+        return view('success', compact('email'));
     }    
 }

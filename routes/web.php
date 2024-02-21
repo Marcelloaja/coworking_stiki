@@ -15,4 +15,4 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('register', [RegisterController::class, 'showRegistrationForm']);
-Route::post('register/save', [RegisterController::class, 'register']);
+Route::post('berhasil', [RegisterController::class, 'register']);

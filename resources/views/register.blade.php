@@ -32,7 +32,7 @@
           <br>
 
           <div class="input-container">
-            <form method="POST" action="{{ url('register/save') }}">
+            <form method="POST" action="{{ url('berhasil') }}">
                 @csrf
                 <div class="form-group">
                   <!-- <label for="nama">Nama Lengkap</label> -->

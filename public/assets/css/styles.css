@@ -91,6 +91,61 @@ h2 {
     font-family: "Poppins";
     font-weight: 600;
 }
+#success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.col h2 {
+    font-family: "Poppins";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.centang img {
+    display: inline;
+    width: 158px;
+    height: 152px;
+    margin: 3rem;
+}
+.desc h3 {
+    padding-bottom: 3rem;
+}
+.col .selanjutnya {
+    background-color: #a7d397;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 140px 5px 140px;
+}
+@media screen and (max-width: 767px) {
+    .col h2 {
+        font-family: "Poppins";
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    .centang img {
+        display: inline;
+        width: 108px;
+        height: 102px;
+        margin: 3rem;
+    }
+    .desc h3 {
+        font-size: 20px;
+        padding-bottom: 2rem;
+    }
+    .col .selanjutnya {
+        background-color: #a7d397;
+        border-radius: 10px;
+        color: white;
+        padding: 5px 90px 5px 90px;
+    }
+}
 
 .content-container {
     background-color: hsla(0, 0%, 100%, 0.3);
